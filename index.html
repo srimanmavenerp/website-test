@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<base href="/" />
+<!-- for deplye
+<base href="/" /> -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>VFix4U – On-Demand IT Services in Hyderabad</title>
+  <meta name="description" content="VFix4U – Hyderabad’s trusted IT service provider. Book professional technicians for laptop, PC, and home appliance repairs, track appointments, and make secure payments online." />
+  <meta name="keywords" content="VFix4U, IT service, laptop repair, computer repair, Hyderabad, home appliance repair" />
+  <meta name="author" content="MAKS VFIX4U IT SOLUTIONS LLP" />
+  <meta name="robots" content="index, follow, max-snippet:50, max-image-preview:large, max-video-preview:large" />
+  <link rel="canonical" href="https://web.vfix4u.com/" />
+
+  <!-- Google Sign-In -->
+   <script src="https://accounts.google.com/gsi/client" async defer></script>
+   <!-- Required for FedCM on localhost -->
+<meta name="google-identity-services-provider" content="https://web.vfix4u.com">
+
+  <meta name="google-signin-client_id" 
+        content="1059020015260-ijigafl7u6peji5nthqms77n33plar9k.apps.googleusercontent.com">
+
+  <!-- iOS/Android PWA meta -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="VFix4U" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .grecaptcha-badge { visibility: hidden; }
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }   
+  </style>
+
+  <!-- Flutter inappwebview support -->
+  <script src="assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
+
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC2mUsQqp94796LvzJlKSyyBxEmAIpsZlU",
+      authDomain: "vfix4u-42216.firebaseapp.com",
+      projectId: "vfix4u-42216",
+      storageBucket: "vfix4u-42216.appspot.com",
+      messagingSenderId: "125949822411",
+      appId: "1:125949822411:web:6f69a97dfb8e2137dea24e",
+      measurementId: "G-5CWKM48VHF"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    getAnalytics(app);
+  </script>
+
+  <!-- Google Maps -->
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjOIZCC6Afzl7_HyHnEoewg0KCMn3ecdQ&callback=Function.prototype"></script>
+
+  <!-- Flutter bootstrap -->
+  <script src="flutter_bootstrap.js" async></script>
+
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-container">
+      <img width="60" class="preloader-img" src="logo.png" alt="Loading logo" />
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container d-flex align-items-center justify-content-between">
+      <div class="header-start d-flex gap-5 align-items-center">
+        <img class="logo" src="webAppbarLogo.png" alt="VFix4U Logo" />
+        <div class="placeholder placeholder-wide"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+      <div class="header-end d-flex gap-5">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Convert .svg <img> tags to inline SVG -->
+  <script>
+    document.querySelectorAll("img.svg").forEach(img => {
+      const imgURL = img.getAttribute("src");
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", imgURL, true);
+      xhr.responseType = "document";
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          const svg = xhr.response.querySelector("svg");
+          if (!svg) return;
+          if (img.id) svg.setAttribute("id", img.id);
+          if (img.className) svg.setAttribute("class", img.className + " replaced-svg");
+          svg.removeAttribute("xmlns:a");
+          if (!svg.getAttribute("viewBox") && svg.getAttribute("height") && svg.getAttribute("width")) {
+            svg.setAttribute("viewBox", `0 0 ${svg.getAttribute("width")} ${svg.getAttribute("height")}`);
+          }
+          img.parentNode.replaceChild(svg, img);
+        }
+      };
+      xhr.send();
+    });
+  </script>
+
+  <!-- Theme from localStorage -->
+  <script>
+    if (typeof(Storage) !== "undefined") {
+      const theme = localStorage.getItem("flutter.demand_theme");
+      if (theme === "true") {
+        document.body.classList.add("theme-dark");
+      } else {
+        document.body.classList.remove("theme-dark");
+      }
+    }
+  </script>
+
+  <!-- Fix for Safari WebGL2 -->
+  <script>
+    if (navigator.userAgent.includes("Safari") && !navigator.userAgent.includes("Chrome")) {
+      const originalGetContext = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function (...args) {
+        if (args[0] === "webgl2") return;
+        return originalGetContext.apply(this, args);
+      };
+    }
+  </script>
+
+</body>
+</html>
